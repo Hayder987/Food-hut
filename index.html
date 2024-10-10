@@ -18,22 +18,47 @@
             extend: {
               colors: {
                 btnBg : "rgb(255, 193, 7)",
-                footerBg : "rgba(255, 193, 7, 0.05)"
+                footerBg : "rgba(255, 193, 7, 0.05)",
+                bgGradient : "rgba(16, 15, 15, 0.7)"
               }
             }
           }
         }
       </script>
-      <style>
+  <style>
         .poppins{
          font-family: "Poppins", sans-serif;
         }
-      </style>
+        .background{
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                      url('./images/banner_1.png');
+          background-position: center;
+          background-size: cover;
+       }
+        
+  </style>
 
 </head>
-<body class="poppins">
+<body class="poppins container mx-auto px-4">
     <!-- header-section ---------------------------->
-    <header class=""></header>
+    <header class="">
+      <nav class="mt-4 flex justify-between items-center mb-10">
+        <img src="./images/Tasty_HUT.png" alt="" class="">
+        <button class="bg-btnBg py-3 px-4 rounded-xl font-bold">Sign Up</button>
+      </nav>
+      <!-- banner section -->
+       <section class="background p-12 lg:p-36 ">
+         <div class="flex flex-col justify-center items-center">
+          <h1 class="text-white text-3xl md:text-6xl font-semibold text-center mb-6">Taste Our Delicious <br> Best Foods</h1>
+          <p class="text-gray-300 w-full md:w-8/12 text-center mb-12">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
+          <div class="flex mb-16">
+            <input type="text" class="py-3 px-4 rounded-xl w-full md:w-[400px]">
+            <button class="bg-btnBg py-3 px-4 rounded-xl font-bold ml-[-20px]">Search</button>
+          </div>
+
+         </div>
+       </section>
+    </header>
      <!-- main-section ---------------------------->
     <main class=""></main>
      <!-- footer-section ---------------------------->
