@@ -18,6 +18,7 @@
             extend: {
               colors: {
                 btnBg : "rgb(255, 193, 7)",
+                btnBg2 : "rgb(255, 193, 7,0.4)",
                 footerBg : "rgba(255, 193, 7, 0.05)",
                 bgGradient : "rgba(16, 15, 15, 0.7)"
               }
@@ -41,10 +42,10 @@
 </head>
 <body class="poppins container mx-auto px-4">
     <!-- header-section ---------------------------->
-    <header class="">
+    <header class="mb-12 md:mb-20">
       <nav class="mt-4 flex justify-between items-center mb-10">
         <img src="./images/Tasty_HUT.png" alt="" class="">
-        <button class="bg-btnBg py-3 px-4 rounded-xl font-bold">Sign Up</button>
+        <button class="bg-btnBg py-3 px-4 rounded-xl font-bold ">Sign Up</button>
       </nav>
       <!-- banner section -->
        <section class="background p-12 lg:p-36 ">
@@ -52,19 +53,96 @@
           <h1 class="text-white text-3xl md:text-6xl font-semibold text-center mb-6">Taste Our Delicious <br> Best Foods</h1>
           <p class="text-gray-300 w-full md:w-8/12 text-center mb-12">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou.</p>
           <div class="flex mb-16">
-            <input type="text" class="py-3 px-4 rounded-xl w-full md:w-[400px]">
-            <button class="bg-btnBg py-3 px-4 rounded-xl font-bold ml-[-20px]">Search</button>
+            <input id="input1" type="text" class="py-3 px-4 rounded-xl w-full md:w-[400px]">
+            <button id="searchBtn" class="bg-btnBg py-3 px-4 rounded-xl font-bold ml-[-20px]">Search</button>
           </div>
 
          </div>
        </section>
     </header>
      <!-- main-section ---------------------------->
-    <main class=""></main>
-     <!-- footer-section ---------------------------->
-    <footer class=""></footer>
-    
+    <main class="mb-12 md:mb-20">
+      <!-- food-section -->
+      <section class="">
+        <div class="mb-12">
+          <h1 class="text-4xl font-semibold text-center">Your Favourite Food</h1>
+        </div>
+        <!-- dynamic category -->
+        <div id="categoryDiv" class="mb-12 md:mb-20 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 md:gap-6">
 
+        </div>
+        <!-- dynamic-card -->
+        <div id="cardDiv" class="mb-12 grid gap-3 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        </div>
+        <div class="flex justify-center items-center">
+          <button id="showBtn" class="bg-btnBg py-3 px-4 rounded-xl font-bold">Show All</button>
+        </div>
+      </section>
+
+      <!-- modal -->
+
+      <!-- Open the modal using ID.showModal() method -->
+       
+       <dialog id="modal1" class="modal modal-middle sm:modal-middle">
+         <div class="modal-box">
+           <div id="modalDiv" class="">
+            
+           </div>
+           <div class="modal-action">
+             <form method="dialog" class="w-full">
+               <!-- if there is a button in form, it will close the modal -->
+               <button class="btn w-full bg-btnBg">Close</button>
+             </form>
+           </div>
+         </div>
+       </dialog>
+
+    </main>
+     <!-- footer-section ---------------------------->
+    <footer class="bg-footerBg p-12 md:p-20">
+      <div class="grid gap-6 grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+        <div class="">
+          <h3 class="text-2xl font-bold mb-4">Section</h3>
+          <ul class="text-xl text-gray-500 space-y-4">
+            <li class="">Home</li>
+            <li class="">Features</li>
+            <li class="">Pricing</li>
+            <li class="">FAQs</li>
+            <li class="">About</li>
+          </ul>
+        </div>
+        <div class="">
+          <h3 class="text-2xl font-bold mb-4">Section</h3>
+          <ul class="text-xl text-gray-500 space-y-4">
+            <li class="">UIUX Design</li>
+            <li class="">Product Design</li>
+            <li class="">Back End Developer</li>
+            <li class="">Front End Developer</li>
+          </ul>
+        </div>
+        <div class="">
+          <h3 class="text-2xl font-bold mb-4">Resource</h3>
+          <ul class="text-xl text-gray-500 space-y-4">
+            <li class="">FAQ</li>
+            <li class="">Support</li>
+            <li class="">Privacy Policy</li>
+            <li class="">Terms of Service</li>
+          </ul>
+        </div>
+        <div class="">
+          <h3 class="text-2xl font-bold mb-4">Subscribe to our newsletter</h3>
+          <p class="mb-4">There are many variations of passages of available, but the majority have suffered</p>
+          <div class="flex flex-col md:flex-row gap-4 md:gap-0">
+            <input  type="text" class="py-3 px-4 rounded-xl w-full border-2">
+            <button  class="bg-btnBg py-3 px-4 rounded-xl font-bold ml-[-20px]">Search</button>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+    
+    <script src="./src/common.js"></script>
     <script src="./src/script.js"></script>
 </body>
 </html>
